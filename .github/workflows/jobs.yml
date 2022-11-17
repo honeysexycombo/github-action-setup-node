@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Save state
-        run: echo "{name}={value}" >> $GIHUB_STATE
+        run: echo "{name}={value}" >> $GITHUB_STATE
       - run: echo $GIHUB_STATE
