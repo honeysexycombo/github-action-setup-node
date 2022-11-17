@@ -1,15 +1,13 @@
 name: Our Jobs
 on: push
-jobs: # 서로 다른 환경에서 날짜를 출력해보기
-  date1:
-    runs-on: ubuntu-latest
-    steps:
-      - run: date
-  date2:
-    runs-on: macos-latest
-    steps:
-      - run: date
-  date3:
-    runs-on: windows-latest
+jobs:
+  job1:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - window-latest
+          - macos-latest
     steps:
       - run: date
