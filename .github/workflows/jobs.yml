@@ -4,6 +4,6 @@ jobs:
   foobar:
     runs-on: ubuntu-latest
     steps:
-      - id: set-foo
-        run: echo "::set-output name=foo::bar"
-      - run: echo ${{ steps.set-foo.outputs.foo }}
+      - name: Save state
+        run: echo "{name}={value}" >> $GIHUB_STATE
+      - run: echo $GIHUB_STATE
