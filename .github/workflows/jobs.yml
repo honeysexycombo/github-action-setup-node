@@ -1,10 +1,11 @@
 name: our steps
 on: push
 jobs:
-  job:
+  backup:
     runs-on: ubuntu-latest
     steps:
-      - id: random
+      - name: original
         run: exit 1
-      - if: ${{ always() }}
-        run: echo ${{ steps.random.outcome }}
+      - name : backup
+        if: ${{ failure() }
+        run: echo backup
