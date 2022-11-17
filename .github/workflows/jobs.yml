@@ -1,13 +1,9 @@
-name: Our Jobs
+name: Our Steps
 on: push
 jobs:
-  job1:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os:
-          - ubuntu-latest
-          - window-latest
-          - macos-latest
+  foobar:
+    runs-on: ubuntu-latest
     steps:
-      - run: date
+      - id: set-foo
+        run: echo "::set-output naem=foo::bar"
+      - run: echo ${{ steps.set-foo.outputs.foo }}
