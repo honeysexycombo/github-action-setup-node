@@ -1,14 +1,11 @@
-name: Our Jobs
+name: test job
 on: push
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo 'Hello'
-          echo 'Github'
+      - run: echo 'Hello github action' > hello.txt
   job2:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: ls -la
+      - run: cat hello.txt
