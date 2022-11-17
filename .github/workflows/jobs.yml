@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: set-foo
-        run: echo "::set-output naem=foo::bar"
+        run: echo "::set-output name=foo::bar"
       - run: echo ${{ steps.set-foo.outputs.foo }}
