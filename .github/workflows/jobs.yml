@@ -5,7 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Hello github action' > hello.txt
-  job2:
-    runs-on: ubuntu-latest
-    steps:
       - run: cat hello.txt
