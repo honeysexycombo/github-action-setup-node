@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3 # 특정 노드의 버전을 설치하는 액션을 호출
+        with: # 매개변수 지정
+          node-version: 16.14.2 # 특정한 키에 원하는 값을 입력해서 버전을 설정한다. 
       - run: npm ci 
       - run: npm test
       - run: npm run build
