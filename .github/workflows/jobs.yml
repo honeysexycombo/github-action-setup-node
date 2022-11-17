@@ -7,5 +7,5 @@ jobs:
       - name: original
         run: exit 1
       - name : backup
-        if: ${{ failure() }
+        if: ${{ failure() }}
         run: echo backup
