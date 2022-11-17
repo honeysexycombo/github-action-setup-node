@@ -4,7 +4,7 @@ jobs:
   job:
     runs-on: ubuntu-latest
     steps:
-      - id: no-condition-failure
+      - id: random
         run: exit 1
       - if: ${{ always() }}
         run: echo ${{ steps.random.outcome }}
