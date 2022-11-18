@@ -2,7 +2,7 @@ name: our steps
 on: push
 jobs:
   backup:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: original
         run: exit 0
